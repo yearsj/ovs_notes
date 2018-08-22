@@ -1,4 +1,4 @@
-博客主页 -- https://segmentfault.com/a/1190000016080251
+博客页面 -- https://segmentfault.com/a/1190000016080251
 ### netlink
 
 netlink socket是一种用于用户态进程和内核态进程之间的通信机制。它通过为内核模块提供一组特殊的API，并为用户程序提供了一组标准的socket接口的方式，实现了全双工的通讯连接。
