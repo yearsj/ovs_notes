@@ -31,7 +31,7 @@ microflow cache的缺点也很明显：
 
 #### Megaflow Cache
 
-虽然基于microflow cache的流表查询方式，能让数据报文第二次命中的时间复杂度达到$O(1)$，但是其真正的性能瓶颈在于用户空间的查询，如果减少数据报文进入用户态，是一个很重要的问题。
+虽然基于microflow cache的流表查询方式，能让数据报文第二次命中的时间复杂度达到$O(1)$，但是其真正的性能瓶颈在于用户空间的查询，如何减少数据报文进入用户态，是一个很重要的问题。
 
 为了解决精确匹配的问题，减少数据报文进入用户态，ovs采用了megaflow cache代替了microflow cache的匹配方式，megaflow cache是一种基于TTS（元组空间搜索算法）的实现方式，采用了模糊匹配取代microflow cache的精确匹配，通过增加在内核态中查询的时间（从1次hash查找到k次，仍然是常数时间内，跟TTS算法中表的数量有关），减少数据报文进入用户态的次数，具体会在TTS算法中解释。
 
@@ -61,6 +61,7 @@ microflow cache的缺点也很明显：
 
 
 参考资料
+
 [Pfaff B, Pettit J, Koponen T, et al. The Design and Implementation of Open vSwitch[C]//NSDI. 2015, 15: 117-130.](https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-pfaff.pdf)
 
 [Open vSwitch流表查找分析](https://www.sdnlab.com/15713.html)
