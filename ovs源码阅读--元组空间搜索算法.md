@@ -3,7 +3,7 @@
  
 # ovs源码阅读--元组空间搜索算法
 
-关于TTS（元组空间搜索算法）的详细介绍可以参考[OVS+DPDK Datapath 包分类技术](https://www.cnblogs.com/neooelric/p/7160222.html)这篇文章，本文只对该篇博客进行简单的介绍，其中案例和图片都来自于[OVS+DPDK Datapath 包分类技术](https://www.cnblogs.com/neooelric/p/7160222.html)
+关于TTS（元组空间搜索算法）的详细介绍可以参考[OVS+DPDK Datapath 包分类技术](https://www.cnblogs.com/neooelric/p/7160222.html)这篇文章，本文只对该篇博客进行简单的介绍，其中案例和部分图片来自于[OVS+DPDK Datapath 包分类技术](https://www.cnblogs.com/neooelric/p/7160222.html)
 
 ### TTS算法主要组成部分
 
